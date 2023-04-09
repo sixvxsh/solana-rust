@@ -1,3 +1,5 @@
+use std::string;
+
 fn main() {
     // // scalar var
     // let unsigned: u8 = 10;
@@ -38,9 +40,23 @@ fn main() {
 
 
     // slice array
-    let arr = [5,6,7,8,10];
-    let slice = &arr[0 .. 4];
-    doing_slice(arr, slice);
+    // let arr = [5,6,7,8,10];
+    // let slice = &arr[0 .. 4];
+    // doing_slice(arr, slice);
+
+
+    // create strings
+
+    let str = "hello world";
+    let mut string: String = String::from("Hello World");
+
+    let slice = &string[.. 6];
+    slice.len();
+
+    string.push('1');
+    string.push_str("!Sia");
+    string = string.replace("Hello" , "Hi");
+    println!("{}" , string);
 
 }
 
@@ -53,9 +69,9 @@ fn main() {
 
 
 
-fn doing_slice(arr:[u8; 5] , slice: &[u8]) {
-    println!("arr: {:?}" , arr);
-    println!("slice: {:?}", slice);
-    println!("length: {}", slice.len());
-    println!("{} {}", slice[0], slice[2]);
-}
+// fn doing_slice(arr:[u8; 5] , slice: &[u8]) {
+//     println!("arr: {:?}" , arr);
+//     println!("slice: {:?}", slice);
+//     println!("length: {}", slice.len());
+//     println!("{} {}", slice[0], slice[2]);
+// }
