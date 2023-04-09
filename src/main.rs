@@ -17,12 +17,21 @@ fn main() {
     // println!("other array is: {:?}" ,_other_arr);
     // println!(" arr2 is: {:?}", _arr2);
     // tuple
-    let tuple: (u8,bool,f32) = (5,true,2.1);
-    let mytuple = (7, "sia", -100);
-    println!("first {}, second {} , third {}" , tuple.0, tuple.1, tuple.2);
-    println!("{:?}" , mytuple);
+    // let tuple: (u8,bool,f32) = (5,true,2.1);
+    // let mytuple = (7, "sia", -100);
+    // println!("first {}, second {} , third {}" , tuple.0, tuple.1, tuple.2);
+    // println!("{:?}" , mytuple);
 
-    let(a,b,c) = tuple;
-    println!("first {} , second {} , third {}" , a ,b , c);
+    // let(a,b,c) = tuple;
+    // println!("first {} , second {} , third {}" , a ,b , c);
 
+
+    // call the function in main
+    println!("{}" , is_even(2));
+}
+
+//  create the function out of main
+pub fn is_even(num: u8) -> bool {
+    let digit: u8 = num % 2;
+    digit == 0 // return bool ( not use semicolon; for returning a function)
 }
