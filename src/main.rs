@@ -46,17 +46,39 @@ fn main() {
 
 
     // create strings
+    // let str = "hello world";
+    // let mut string: String = String::from("Hello World");
 
-    let str = "hello world";
-    let mut string: String = String::from("Hello World");
+    // let slice = &string[.. 6];
+    // slice.len();
 
-    let slice = &string[.. 6];
-    slice.len();
+    // string.push('1');
+    // string.push_str("!Sia");
+    // string = string.replace("Hello" , "Hi");
+    // println!("{}" , string);
 
-    string.push('1');
-    string.push_str("!Sia");
-    string = string.replace("Hello" , "Hi");
-    println!("{}" , string);
+    //flow control {if}
+    // let n = 0;
+    // if n > 0 {
+    // println!("greater than 0");
+    // } else if n < 0 {
+    //     println!("less than 0");
+    // } else {
+    //     println!("is 0");
+    // }
+
+    // flow control {for}
+    // for i in 0..6 {
+    //     println!("{}" , i);
+    // }
+
+
+    // flow control {while}
+    // let mut i = 0;
+    // while i < 5 {
+    //     println!("{}", i);
+    //     i += 1;
+    // }
 
 }
 
