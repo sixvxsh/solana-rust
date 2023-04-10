@@ -84,22 +84,30 @@ fn main() {
     // }
 
     //call the function
-    example(25);
+    // example(25);
 
 
     // predefined data and don't we can after change it   
-    let mt_str = "hi";
+    // let mt_str = "hi";
     
     // this type of data will saved in heap and we can change this variable after
-    let my_string = String::from("new str");
+    // let my_string = String::from("new str");
 
 
     // ownership
+    // let mut a = String::from("hello");
+    // a = some_function(a);
+    // println!("in main function: {}", a );
 
-    let mut a = String::from("hello");
-    a = some_function(a);
+    //borrowing - we borrow a value with & (refrence)
+    // let  a = String::from("hello");
+    // some_function(&a);
+    // println!("in main function: {}", a );
+    
+    // borrowing - i want to change the refrence with &mut
+    let  mut a = String::from("hello");
+    some_function(&mut a);
     println!("in main function: {}", a );
-
 
 
 }
@@ -125,7 +133,19 @@ fn example(number: i16) {
 // }
 
 
-fn some_function(input: String) -> String {
+// fn some_function(input: String) -> String {
+//     println!("some function: {}", input);
+//     input
+// }
+
+
+// borrowing
+// fn some_function(input: &String) {
+//     println!("some function: {}", input);
+// }
+
+// borrowing with changing refrence - &mut
+fn some_function(input: &mut String) {
+    input.push_str(" how is it doing?");
     println!("some function: {}", input);
-    input
 }
