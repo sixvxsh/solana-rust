@@ -1,4 +1,3 @@
-use std::string;
 
 fn main() {
     // // scalar var
@@ -78,7 +77,30 @@ fn main() {
     // while i < 5 {
     //     println!("{}", i);
     //     i += 1;
+    //     if i == 3 {
+    //         println!("exit");
+    //         continue // or break
+    //     }
     // }
+
+    //call the function
+    example(25);
+
+
+    // predefined data and don't we can after change it   
+    let mt_str = "hi";
+    
+    // this type of data will saved in heap and we can change this variable after
+    let my_string = String::from("new str");
+
+
+    // ownership
+
+    let mut a = String::from("hello");
+    a = some_function(a);
+    println!("in main function: {}", a );
+
+
 
 }
 
@@ -89,6 +111,10 @@ fn main() {
 //     digit == 0 // return bool ( not use semicolon; for returning a function)
 // }
 
+fn example(number: i16) {
+    println!("number {}" , number )
+}
+
 
 
 // fn doing_slice(arr:[u8; 5] , slice: &[u8]) {
@@ -97,3 +123,9 @@ fn main() {
 //     println!("length: {}", slice.len());
 //     println!("{} {}", slice[0], slice[2]);
 // }
+
+
+fn some_function(input: String) -> String {
+    println!("some function: {}", input);
+    input
+}
